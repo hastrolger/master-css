@@ -1,0 +1,22 @@
+/* 
+    there are 3 ways to add css styles to our html
+    - inline styles (in our html document)
+        <h1 styles="font-size:2px;">some text</h1>
+    
+    - embedded css (in our html document)
+        <style>
+            .square{
+                background: red;
+            }
+        </style>
+    - css file (import css styles in our html document)
+        
+    Writing css styles with selector, properties and values
+        selector {
+                property: value;
+            }
+*/
+
+h1 {
+    color: blue;
+}

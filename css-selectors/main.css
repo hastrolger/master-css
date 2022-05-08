@@ -1,0 +1,95 @@
+/* 
+    universal selector
+
+   it has a 0 specificity 
+   selects all elements of the document
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+    type selector 
+
+    it's not recommended to use it  
+    it selects by tag name  
+*/
+body {
+ font-family: sans-serif;
+}
+
+/* class selector */
+.square {
+    background: red;
+}
+
+/* 
+    id selector 
+
+    it's not recommended to use it  
+    it selects by id  
+*/
+#info {
+    font-size: 2em;
+}
+
+/*
+    combinators 
+
+    relationship between the selectors:
+
+        descendant selector (space)
+        child selector (>)
+        adjacent sibling selector (+)
+        general sibling selector (~)
+*/
+
+.square a {
+    color: pink ;
+}
+
+.todo {
+    margin-left: 50px;
+}
+
+.list .item {
+    text-decoration: underline;
+}
+
+/* it's not recommended to use them because of specificity */
+
+.list > .item {
+    color: green;
+    font-size: 1.5em;
+    list-style-type: circle;
+}
+
+.sub-list > .item {
+    color: blue;
+    list-style: decimal;
+}
+ /*
+.text + *{
+    color: yellow;
+}
+*/
+
+/*
+
+    attribute selector
+    [value | class | type] {
+        
+    }
+
+    value~=abc.com select any value that contains abc.com
+    value^=abc.com select any value which starts with abc.com
+    value$=abc.com select any value which ends with abc.com
+    value*=abc.com select any value with abc.com
+
+*/
+
+[class] {
+    background-color: brown;
+}

@@ -1,0 +1,26 @@
+/*
+    specificity is more important that cascade style
+
+    range of specificity ::: 1 - 10 - 100 
+
+*/
+
+/* 100 */
+#title{
+    color: chartreuse;
+}
+
+/* 10  */
+.title {
+    color: aqua;
+}
+
+/* 1 */
+h1 {
+    color: blue;
+    background: red; /* this property is applied here because no other selector shares it */ 
+}
+/* 1 + 10 */
+h1.title {
+    color: purple;
+}

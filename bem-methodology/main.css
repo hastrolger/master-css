@@ -1,0 +1,45 @@
+/*
+
+    BEM 
+    
+    a Block can exist without any dependencies, eg header, footer
+    an Element belongs and depends of a block, eg header__title, footer__right
+    a Modifier cab be used in elements or blocks for apply a different characteristic, eg header--wave
+
+
+    with classes we keep the specificity to a minimum
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+}
+
+.nav {
+    background-color: #264DE4;
+    padding: 0 100px;
+    color: white; /* this property is not inherited by links */ 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; /* y-axis */
+    height: 70px;
+}
+
+.nav__logo {
+    height: 100%;
+}
+
+.nav__link {
+    color: inherit; /* inherit from its father nav */
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.nav__link--active {
+    border-bottom: 2px solid white;
+}
