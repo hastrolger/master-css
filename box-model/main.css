@@ -1,0 +1,104 @@
+/*
+
+    All elements are treated as boxes which can be changed their css properties 
+
+    box model is diveded into layers
+    each element has a border, padding and a content
+
+    ******        ******
+    ****** margin ******
+    ******        ******
+    ********************
+    ********************
+    *     padding      *
+    *  **************  *
+    *  *            *  *
+    *  *            *  *
+    *  *   content  *  * border
+    *  *            *  *
+    *  *            *  *
+    *  **************  *
+    *                  *
+    ********************
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Lucida Sans;
+}
+
+/* content layer */
+.card {
+    background: royalblue;
+    color: purple;
+    width: auto; /* by default width is auto */
+    max-width: 300px; /* for applying max-width value auto in width is needed */
+    height: 250px;
+    /* overflow: hidden; /* hide overflowed things */
+    /* overflow: scroll; */
+    
+    
+    /* 
+        padding layer 
+
+        it is devided into 4 parts »»» TOP RIGHT BOTTOM LEFT (clokwise)
+    */
+    padding: 10px 5px; 
+
+    /*
+        border layer
+        is the last one that modifies the box size
+
+        all are shorthands »»» TOP RIGHT BOTTOM LEFT 
+        border-color
+        border-width 
+        border-style »»» double dashed dotted groove ridge
+        (it inherits font color by default)
+    */
+    border: 5px dotted black; /* abb */
+}
+
+/* 
+    margin layer does not affect element's size
+*/
+.card--one {
+    /* shorthand »»» TOP RIGHT BOTTOM LEFT */
+    margin: 0 auto; /* auto value works in x-axis only if it was a block and width was defined */
+}
+
+/*
+    margin collapse
+    works with horizontal margins
+
+    1:50 minutes REFORCE 
+*/
+
+/*  
+    there exists 2 types of boxes with a different property
+    block : those elements occupy 100% of the container and generates a line break
+            those use all properties of the box model : margin padding width height
+    inline : those elements occupy just what they wraps and not generates a line break
+            those no use properties of the box model
+
+            
+    inline-block : those elements keep as inline but can use properties of the box model
+*/  
+
+.block {
+    background-color: red;
+    width: 200px;
+    margin: 0 auto;
+}
+
+a {
+    background-color: purple;
+    color: white;
+    display: inline-block;/* set inline-block to solve the problems bellow*/
+    margin: 25px; /* just applied R and L margin if inline */
+    padding: 10px; /* affects sorrounding elements */ 
+}
