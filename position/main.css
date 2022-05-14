@@ -1,0 +1,58 @@
+/*
+
+    it is important to keep in mind the NORMAL FLOW that refers 
+    to the positioning of every element that start at the left of the container
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    border: 4px solid;
+    margin: 40px auto;
+}
+
+.element {
+    width: 125px;
+    height: 125px;
+    margin-bottom: 15px;
+}
+
+.static {
+    background-color: aqua;
+    /* position: static; /* all element have this value as default */
+}
+
+.relative {
+    background-color: blueviolet;
+    position: relative; /* this value unblocks 4 values to move the element */
+    /* Unblocked properties: TOP RIGHT BOTTOM LEFT */
+    /* this properties no affects the positioning of surronding elements */
+    /*top: 50px;
+    right: -50px;*/
+    /* an element with relative has a reserved space */
+}
+
+.absolute {
+    background-color: green;
+    position: absolute; /* this property no reserves a space */
+    /* with absolute we can position in any part of the document */
+    /* it will position to the ancestor that has a different value to static */
+    top: 0;
+}
+
+.fixed {
+    background-color: tomato;
+    position: fixed; /* it is based to the vh */
+}
+
+/*
+
+    all elements that have a position different to static have a z-index
+
+*/

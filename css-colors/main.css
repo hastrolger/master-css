@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+}
+
+.container {
+    padding: 70px;
+}
+
+.title {
+    font-size: 42px;
+    color: rgb(0, 125, 94, .4); /* it is a type of function, accepts values from 0 to 255 (red - green - blue) */
+    /* a fourth value is permitted which represents to opacity with 1 as default */
+    background-color: #FF0000; /* similarly to rgb RED GREEN BLUE (FF0000), it also accepts opacity */
+}

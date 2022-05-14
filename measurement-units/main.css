@@ -1,0 +1,30 @@
+/*
+
+    Absolute Unit its value wont change ie: 40px
+    Relative Unit depends of any external value and can change depending of the context
+        REM is relative to the font size of the HTML Document
+        EM is relative to the font size of its father or ancestor
+    % is relative to the size of its father
+*/
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px; /* 16px by default */
+}
+
+body {
+    font-family: Arial;
+}
+
+.container {
+    padding: 40px;
+}
+
+.title {
+    font-size: 1.5rem; /* 1rem by defaul is 16px but in this case it takes another value set above */
+}
+
