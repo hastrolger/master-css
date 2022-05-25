@@ -1,0 +1,66 @@
+/*
+    flexbox allows us work with responsive design
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial";
+}
+
+.container {
+  display: flex; /* all items take a row direction by default */
+  /*flex-direction: row; /* change the direction of the main axis*/
+  justify-content: space-between; /* align all items along the main axis*/
+  /* 
+    center : center items
+    space-between : push items to theirs extrems 
+    space-arround : give equal space
+    space-evenly : give an equitative space to all 
+  */
+  
+  align-items: center; /* align all items along the cross axis*/
+  /*
+        if column direction is set 
+            items will be aligned on x-axis
+        if row direction is set 
+            items will be aligned on y-axis
+    */
+  flex-wrap: wrap; /* by default is nowrap >>> 
+    this value make flex items smaller if they overflow the container
+    
+    with wrap value flex items will take a break line 
+    */
+
+  align-content: center; /*only works when flex-wrap has a wrap value*/
+  width: 98%;
+  max-width: 800px;
+  min-height: 600px;
+  margin: 80px auto;
+  border: 3px solid;
+}
+
+.element {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 100px;
+  width: 500px;
+  height: 100px;
+}
+
+.element1 {
+  background-color: crimson;
+}
+
+.element2 {
+  background-color: steelblue;
+}
+
+.element3 {
+  background-color: purple;
+}
